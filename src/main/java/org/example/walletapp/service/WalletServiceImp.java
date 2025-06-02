@@ -18,13 +18,12 @@ import java.math.BigDecimal;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(isolation = Isolation.REPEATABLE_READ)
 public class WalletServiceImp implements WalletService {
 
     private final WalletRepository walletRepository;
 
     @Override
-
+    @Transactional(isolation = Isolation.REPEATABLE_READ)
     public WalletResponse operate(OperationRequest operationRequest) {
         WalletEntity walletEntity = walletRepository.findById(operationRequest.getWalletId())
                 .orElseGet(() -> {
