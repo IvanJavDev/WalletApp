@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ivank (generated)
+      changes:
+        - createTable:
+            tableName: wallet
+            columns:
+              - column:
+                  name: walletId
+                  type: java.lang.Long
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: balance
+                  type: java.math.BigDecimal
+                  constraints:
+                    nullable: false

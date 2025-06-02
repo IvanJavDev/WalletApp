@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: ivank (generated)
+      changes:
+        - insert:
+            tableName: wallet
+            columns:
+              - column:
+                  name: walletId
+                  value: 1
+              - column:
+                  name: balance
+                  valueNumeric: 0.00
+        - insert:
+            tableName: wallet
+            columns:
+              - column:
+                  name: walletId
+                  value: 2
+              - column:
+                  name: balance
+                  valueNumeric: 0.00
+        - insert:
+            tableName: wallet
+            columns:
+              - column:
+                  name: walletId
+                  value: 3
+              - column:
+                  name: balance
+                  valueNumeric: 0.00
